@@ -1,13 +1,13 @@
-package com.example.mavenmultimodulesample;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MavenMultiModuleSampleApplication {
+public class WebAppApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(MavenMultiModuleSampleApplication.class, args);
+    SpringApplication.run(WebAppApplication.class, args);
   }
 
 }
