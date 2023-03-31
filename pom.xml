@@ -22,6 +22,7 @@
   <modules>
     <module>devops-console-common</module>
     <module>devops-console-webapp</module>
+    <module>devops-console-core</module>
   </modules>
 
   <properties>
@@ -37,11 +38,17 @@
       <dependency>
         <groupId>com.example</groupId>
         <artifactId>devops-console-common</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${revision}</version>
       </dependency>
       <dependency>
         <groupId>com.example</groupId>
         <artifactId>devops-console-webapp</artifactId>
+        <version>${revision}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.example</groupId>
+        <artifactId>devops-console-core</artifactId>
+        <version>${revision}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
