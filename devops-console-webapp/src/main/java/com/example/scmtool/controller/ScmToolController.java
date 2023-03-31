@@ -17,7 +17,7 @@ public class ScmToolController {
   @GetMapping("/sample")
   public SampleResponseDTO sampleController() {
     final String utilString = CommonUtil.sampleMethod();
-    final ScmToolVo scmToolVo = scmToolService.sampleMethod();
+    final ScmToolVo scmToolVo = scmToolService.getScmInfo();
     return SampleResponseDTO.builder().message(utilString + "sampleController" + ", " + scmToolVo.toString()).build();
   }
 
