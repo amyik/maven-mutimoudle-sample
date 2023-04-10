@@ -20,10 +20,10 @@
   <description>maven-multi-module-sample</description>
 
   <modules>
-    <module>../devops-console-common</module>
-    <module>../</module>
-    <module>../devops-console-core</module>
-    <module>../devops-console-tool-client</module>
+    <module>/devops-console-common</module>
+    <module>/</module>
+    <module>/devops-console-core</module>
+    <module>/devops-console-tool-client</module>
   </modules>
 
   <properties>
