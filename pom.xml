@@ -1,99 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.6.6</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <groupId>com.example</groupId>
+    <artifactId>maven-multi-module-sample</artifactId>
+    <version>${revision}</version>
+    <relativePath>parent/pom.xml</relativePath>
   </parent>
 
-  <groupId>com.example</groupId>
-  <artifactId>maven-multi-module-sample</artifactId>
-  <version>${revision}</version>
-  <packaging>pom</packaging>
+  <packaging>war</packaging>
 
-  <name>maven-multi-module-sample</name>
-  <description>maven-multi-module-sample</description>
-
-  <modules>
-    <module>devops-console-common</module>
-    <module>devops-console-webapp</module>
-    <module>devops-console-core</module>
-    <module>devops-console-tool-client</module>
-  </modules>
+  <artifactId>devops-console-webapp</artifactId>
 
   <properties>
-    <java.version>1.8</java.version>
-    <revision>0.0.1-SNAPSHOT</revision>
-    <maven.compiler.source>8</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.example</groupId>
-        <artifactId>devops-console-common</artifactId>
-        <version>${revision}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.example</groupId>
-        <artifactId>devops-console-webapp</artifactId>
-        <version>${revision}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.example</groupId>
-        <artifactId>devops-console-core</artifactId>
-        <version>${revision}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.example</groupId>
-        <artifactId>devops-console-tool-client</artifactId>
-        <version>${revision}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
   <dependencies>
-
     <dependency>
       <groupId>com.example</groupId>
-      <artifactId>devops-console-common</artifactId>
+      <artifactId>devops-console-core</artifactId>
     </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-devtools</artifactId>
-      <scope>runtime</scope>
-      <optional>true</optional>
-    </dependency>
-
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <excludes>
-            <exclude>
-              <groupId>org.projectlombok</groupId>
-              <artifactId>lombok</artifactId>
-            </exclude>
-          </excludes>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>
